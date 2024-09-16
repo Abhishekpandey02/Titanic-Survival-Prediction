@@ -20,14 +20,14 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     file_name = uploaded_file
 else:
-    file_name = "/titanic.csv"
+    file_name = "titanic.csv"
  
 clicked=st.button('Get prediction')
 print(clicked)   
 
 #LOADING THE MODEL
 try:
-    with open('/model.pkl', 'rb') as f:
+    with open('model.pkl', 'rb') as f:
         model = pickle.load(open(f))
 except FileNotFoundError:
     st.error("Model file not found. Please ensure 'model.pkl' is in the same directory.")
