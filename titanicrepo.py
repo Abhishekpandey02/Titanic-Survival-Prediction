@@ -28,7 +28,7 @@ print(clicked)
 #LOADING THE MODEL
 try:
     with open('model.pkl', 'rb') as f:
-        model = pickle.load(open(f))
+        model = pickle.load(f)
 except FileNotFoundError:
     st.error("Model file not found. Please ensure 'model.pkl' is in the same directory.")
     model = None
